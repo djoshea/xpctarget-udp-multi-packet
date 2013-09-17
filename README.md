@@ -2,7 +2,11 @@ Multi-Packet UDP for xPC Target
 ===============================
 
 This tool provides a Simulink block which automatically splits data (as a vector of `uint8`'s)
-across as many UDP packets as necessary. Each packet is prefixed with a short (~ 20 byte) header 
+across as many UDP packets as necessary. 
+
+![Block screenshot](https://raw.github.com/djoshea/xpctarget-udp-multi-packet/master/blockScreenshot.png)
+
+Each packet is prefixed with a short (~ 20 byte) header 
 which identifies the packets as arising from this block. This prefix also carries information about:
 
 * Which block id sent the packet (in case multiple instances of the multi packet block are directed at the same ethernet card / port.
