@@ -23,5 +23,5 @@ You will also need to set the send and receive IP addresses and ports, transmit 
 These parameters are all accessible via the block's mask; double click to set these.
 
 In `src`, there is multithreaded C code for building a ring buffer of Packets and PacketSets (groups of packets containing pieces of the same data block)
-which handle reassembling the packets at the receiving Linux PC. You will need to provide additional "raw data has arrived" where indicated inside `parser.c`.
+which handle reassembling the packets at the receiving Linux PC. **You will need to provide additional "raw data has arrived" where indicated inside `parser.c`.**
 
