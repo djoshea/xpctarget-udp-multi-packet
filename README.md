@@ -17,7 +17,7 @@ Double clicking on the block will open the block mask where various parameters m
 The first parameter is a numeric parameter should be unique across the model, or at least unique among all 
 blocks which transmit over the same Ethernet Tx Id to the same IP addresses. The valid range is from 0 to 255, 
 i.e. a `uint8`. This parameter will be combined with an incrementing `uint8` counter to form the Identification
-field of the (IP header)[http://en.wikipedia.org/wiki/IPv4#Packet_structure].
+field of the [IP header](http://en.wikipedia.org/wiki/IPv4#Packet_structure).
 
 Source and destination IP addresses and ports specify the IP and UDP packet parameters (broadcast IPs okay), 
 destination MAC address using the `macaddr` MATLAB function (broadcast MAC `ff:ff:ff:ff:ff:ff` okay), 
@@ -29,4 +29,6 @@ bytes in data modulo 2^16. This feature is usually not necessary, as the receivi
 IP and UDP checksums in the header already, and the length of the packet will also be returned by the socket `read()` 
 on the receiving computer, but this is provided as a convenience. Note that the length of the packet returned by `read()`
 will be rounded up to the nearest even integer, whereas the length provided by this header may be odd.
+
+![Mask Parameters Screenshot](https://raw.githubusercontent.com/djoshea/xpctarget-udp-multi-packet/master/screenshot.png)
 
